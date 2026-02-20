@@ -232,9 +232,9 @@ export default function ProjectForm() {
                   <option value="completed">Completed</option>
                   <option value="pending">Pending</option>
                 </select>
-                <div style={styles.statusIcon}>
+                {/* <div style={styles.statusIcon}>
                   {getStatusIcon(form.status)}
-                </div>
+                </div> */}
               </div>
             </div>
 
