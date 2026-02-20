@@ -92,6 +92,10 @@ const projectsSlice = createSlice({
         const { projectId, task } = action.meta.arg;
         const project = state.list.find((p) => p.id === projectId);
 
+        if (!project.tasks) {
+          project.tasks = [];
+        }
+
         const index = project.tasks.findIndex((t) => t.id === task.id);
 
         if (index >= 0) {

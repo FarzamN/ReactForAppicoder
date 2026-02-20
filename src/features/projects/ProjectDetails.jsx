@@ -13,7 +13,6 @@ import {
   ArrowLeft,
   CheckSquare,
   Square,
-  PlusCircle,
   Calendar,
   FileText,
   BarChart3,
@@ -32,7 +31,9 @@ export default function ProjectDetails() {
   const [showCompleted, setShowCompleted] = useState(true);
 
   const handleSaveTask = (task) => {
+    console.log({ projectId: project.id, task });
     dispatch(saveTask({ projectId: project.id, task }));
+
     setEditingTask(null);
   };
 
